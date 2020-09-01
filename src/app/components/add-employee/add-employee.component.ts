@@ -47,7 +47,7 @@ export class AddEmployeeComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-    // Send to Service
+    // Send to API Service
     if (this.status.toLowerCase() === 'update') {
       this.empService.updateEmployee(JSON.stringify(this.registerForm.value))
         .subscribe((res) => {
